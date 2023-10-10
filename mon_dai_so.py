@@ -68,3 +68,27 @@ print("Cơ sở không gian cột:")
 print(nullspace)
 print("Không gian cột:")
 print(columnspace)
+
+# Tạo cửa sổ giao diện
+window = tk.Tk()
+
+# Tạo các nút chức năng
+solve_button = tk.Button(window, text="Giải hệ phương trình", command=solve_linear_equation)
+inverse_button = tk.Button(window, text="Tính ma trận nghịch đảo", command=calculate_inverse_matrix)
+eigen_button = tk.Button(window, text="Tính giá trị riêng và vector riêng", command=calculate_eigen)
+determinant_button = tk.Button(window, text="Tính định thức của ma trận", command=calculate_determinant)
+basis_button = tk.Button(window, text="Tính cơ sở và không gian cột của ma trận", command=calculate_basis_column_space)
+
+# Hiển thị kết quả
+result_label = tk.Label(window, text="Kết quả sẽ được hiển thị ở đây.")
+
+# Định vị các nút và kết quả
+solve_button.pack()
+inverse_button.pack()
+eigen_button.pack()
+determinant_button.pack()
+basis_button.pack()
+result_label.pack()
+
+# Bắt đầu vòng lặp chương trình
+window.mainloop()
